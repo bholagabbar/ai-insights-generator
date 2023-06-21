@@ -20,4 +20,4 @@ output/
 .history/
 *.sublime-*
 *.swp
-
+.githubtoken
