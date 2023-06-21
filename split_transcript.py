@@ -1,5 +1,6 @@
 import sys
 import json
+import os
 
 def create_text_files(text_data, max_words_per_file):
     # Split the text into chunks of maximum specified words
@@ -22,6 +23,12 @@ def process_json(json_data):
     # Load JSON data
     sentences = [item['sentence'] for item in json_data]
     return ' '.join(sentences)
+
+def print_prompts_if_exists():
+    if os.path.exists(".prompts"):
+        with open(".prompts", 'r') as file:
+            prompts = file.read()
+            print("\n\n======== STORED PROMPTS ===========\n\n{}".format(prompts))
 
 def main():
     text_data = None
@@ -48,6 +55,9 @@ def main():
 
     # Create text files
     create_text_files(text_data, max_words)
+
+    # Print prompts if file exists
+    print_prompts_if_exists()
 
 if __name__ == "__main__":
     main()
