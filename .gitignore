@@ -20,4 +20,6 @@ output/
 .history/
 *.sublime-*
 *.swp
-.githubtoken
+*.githubinfo
+*output.txt
+*.prompts
