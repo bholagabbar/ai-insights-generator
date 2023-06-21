@@ -1,0 +1,23 @@
+# Python-specific
+*.pyc
+__pycache__/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Output files and directories
+output/
+
+# Visual Studio Code specific
+.vscode/
+*.code-workspace
+.history/
+*.sublime-*
+*.swp
+
