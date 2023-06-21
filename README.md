@@ -39,3 +39,10 @@ This repository provides a Python script that takes a Fireflies transcript in JS
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+#### Personal - Pushing to git
+
+* git config --local user.name ""
+* git config --local user.email ""
+* Store token in `.githubtoken`
+* `git push https://bholagabbar@github.com/bholagabbar/fireflies-transacript-splitter` and enter password
