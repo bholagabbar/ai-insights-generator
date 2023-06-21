@@ -6,7 +6,7 @@ language = "python3"
 entrypoint = "split_transcript.py"
 # A list of globs that specify which files and directories should
 # be hidden in the workspace.
-hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc"]
+hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc", ".prompts", "output_*.txt"]
 
 # Specifies which nix channel to use when building the environment.
 [nix]
