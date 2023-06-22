@@ -1,0 +1,2 @@
+chatgpt-wrapper @ git+https://github.com/mmabrouk/chatgpt-wrapper@a5a63d6
+python-dotenv

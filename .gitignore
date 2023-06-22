@@ -24,3 +24,6 @@ output/
 *output.txt
 *.prompts
 output*
+.env
+config.json
+transcript.*

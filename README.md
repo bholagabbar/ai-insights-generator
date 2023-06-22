@@ -1,14 +1,22 @@
-# Fireflies Transcript Splitter
-
+```markdown
+# ai-insights-generator
 
 ## Overview
 
-This repository provides a Python script that takes a Fireflies transcript in JSON format or otherwise, splits it into several parts, and prepares the split parts for analysis and extraction of large information using ChatGPT or other similar models. The script breaks down the transcript into manageable chunks, allowing for easier processing and analysis.
+This script processes longer customer research calls, such as transcripts from [fireflies ai](https://fireflies.ai/), breaking them into manageable chunks and generating insights and recommendations for each chunk.
+
+It also provides an aggregated set of insights and recommendations for the entire research.
+
+The script utilizes the OpenAI API to interact with GPT and generate comprehensive summaries, recommendations, and analysis.
 
 ## Features
 
-- Splits Fireflies transcript in JSON format or regular text into smaller parts
-- Outputs each part as a separate text file while also printing it out onto the console with well demarcated output lines
+- Long Research Document Processing: The script efficiently handles long research documents, breaking them into smaller, manageable chunks.
+- Chunk-wise Insights and Recommendations: It applies extractive summarization techniques to derive insights and recommendations for each chunk of the research document.
+- Aggregated Insights and Recommendations: The script provides an aggregated set of insights and recommendations for the entire research.
+- ChatGPT Integration: It utilizes ChatGPT or similar models to generate comprehensive summaries and analysis for each chunk and the entire research document.
+
+Feel free to use this updated version as needed for your README.
 
 ## Usage
 
@@ -24,31 +32,37 @@ This repository provides a Python script that takes a Fireflies transcript in JS
    pip install -r requirements.txt
    ```
 
-3. Place your Fireflies transcript file (in JSON format) in the same directory as the script. You can download your transcript in JSON format from the fireflies call dashboard
+3. Place your transcript document in the same directory as the script. Ensure you have a `.env` file derived from `.env.sample` and place your OpenAI key there.
 
-4. Run the script optionally with a JSON file as an argument. If you don't have the input file, you can run it as is and it prompts you paste the text:
+4. Customize the prompts and configurations in the `config.json` file according to your specific requirements. This file is ignored by Git to ensure privacy of business-sensitive information.
+
+5. Run the script optionally with the research document file as an argument. If you don't have the input file, you can run it as is, and it will prompt you to paste the text:
 
    ```shell
-   python split_transcript.py your_transcript.json
+   python split_transcript.py your_research_document.txt
    ```
    or
    ```shell
    python split_transcript.py
    ```
-6. The script will create an output folder with the same name as the JSON file (without the file extension). Inside this folder, you will find the split text files. It also prints the output to the console
 
-7. Store business sensitive prompts etc in the `.prompts` file which is gitignored
+6. The script will split the research document into smaller parts, generate insights and recommendations for each part, and provide an aggregated set of insights and recommendations for the entire research.
 
-8. Use GPT to analyse the transcript outputs using the prompts
+7. The output will be saved as separate text files for each part, and the insights and recommendations will be printed to the console.
+
+8. Use the generated insights, recommendations, and analysis to gain valuable insights, make informed decisions, and enhance your research.
 
 ## Additional Usage Notes
 
-* #### Pushing to git when global config is set for another user
+* #### Pushing to Git When Global Config Is Set for Another User
   * `git config --local user.name ""`
   * `git config --local user.email ""`
-  * Store token in `.githubinfo` along with potentially other git information
-  * `git push https://bholagabbar@github.com/bholagabbar/fireflies-transacript-splitter` and enter password
+  * Store token in `.githubinfo` along with potentially other Git information
+  * `git push https://github.com/your-username/fireflies-transcript-splitter.git` and enter the password/token when prompted
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+```
+
+Please review the README and make any necessary modifications based on your specific project requirements and preferences.
