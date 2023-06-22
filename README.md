@@ -1,5 +1,7 @@
 # ai-insights-generator
 
+Deployed on https://replit.com/@bholagabbar/ai-insights-generator . Fork the repl, change the configuration and it should be good to go
+
 ## Overview
 
 This script accepts large input data, such as customer research calls or transcripts from various sources (eg from [fireflies ai](https://fireflies.ai/)), and generates insights and recommendations based on the provided data. It can handle input data from the following sources: HTTP(S) URLs, local files, or user input prompts. The script utilizes the OpenAI API to interact with the `gpt-3.5-turbo-16k` model and generate these insights and recommendations.
@@ -26,18 +28,18 @@ This script accepts large input data, such as customer research calls or transcr
    pip install -r requirements.txt
    ```
 
-5. Run the script optionally research document file as an argument, or a link to a a transcript. If you don't have either, you can run it as is, and it will prompt you to paste the text:
+5. Run the script optionally research document file as an argument, or a link to a a transcript. If you don't have either, you can run it as is, and it will prompt you to paste the text or URL:
 
    ```shell
-   python split_transcript.py https://jsonkeeper.com/b/WKIV
+   python main.py
    ```
    or
    ```shell
-   python split_transcript.py your_research_document.txt
+   python main.py https://jsonkeeper.com/b/WKIV
    ```
    or
    ```shell
-   python split_transcript.py
+   python main.py your_research_document.txt
    ```
 
 6. The insights and recommendations are printed on the screen, as well as saved to an output file

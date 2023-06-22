@@ -69,28 +69,37 @@ def generate_output(input_text, insights, recs):
     with open(file_name, 'w') as file:
         file.write(output_text)
 
+def get_data_from_link(json_file_or_url):
+    try:
+        print("Accessing URL...")
+        response = requests.get(json_file_or_url, verify=False)
+        response.raise_for_status()
+        json_data = response.json()
+        text_data = process_fireflies_json_transcript(json_data)
+        print("Data retrieved from URL successfully.")
+    except requests.exceptions.RequestException as e:
+        print(f"Error occurred while accessing URL: {json_file_or_url}")
+        print(e)
+        sys.exit(1)
+    except (json.JSONDecodeError, ValueError):
+        print(f"Invalid JSON data at URL: {json_file_or_url}. Treating as plain text.")
+        text_data = response.text
+
+    return text_data
+
 def main():
     text_data = None
 
     # Parse input
     if len(sys.argv) < 2:
-        print("No file or URL provided. Please enter the text or URL:")
+        print("Please enter the text or URL hosting it:")
         text_data = input()
+        if text_data.startswith("http://") or text_data.startswith("https://"):
+            text_data = get_data_from_link(text_data)
     else:
         json_file_or_url = sys.argv[1]
         if json_file_or_url.startswith("http://") or json_file_or_url.startswith("https://"):
-            try:
-                response = requests.get(json_file_or_url)
-                response.raise_for_status()
-                json_data = response.json()
-                text_data = process_fireflies_json_transcript(json_data)
-            except requests.exceptions.RequestException as e:
-                print(f"Error occurred while accessing URL: {json_file_or_url}")
-                print(e)
-                sys.exit(1)
-            except (json.JSONDecodeError, ValueError):
-                print(f"Invalid JSON data at URL: {json_file_or_url}. Treating as plain text.")
-                text_data = response.text
+            text_data = get_data_from_link(json_file_or_url)
         else:
             try:
                 with open(json_file_or_url) as file:
