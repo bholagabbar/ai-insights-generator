@@ -1,6 +1,6 @@
 # ai-insights-generator
 
-Deployed on https://replit.com/@bholagabbar/ai-insights-generator . Fork the repl, change the configuration and it should be good to go
+Deployed on https://replit.com/@bholagabbar/ai-insights-generator . Fork the repl and it should be good to go. The configuration can be adjusted for a business specific usecase or to have the LLM act as a subject matter expert.
 
 ## Overview
 

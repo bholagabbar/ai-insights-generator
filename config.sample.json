@@ -1,6 +1,6 @@
 {
-    "personality": "Enter the description of the advisor or expert providing insights and recommendations.",
-    "idea": "Enter a brief description of your startup idea or the problem you're addressing.",
-    "insights": "Enter the description or prompt for extracting key insights from the conversation or input data.",
-    "recommendations": "Enter the description or prompt for generating detailed recommendations based on insights."
+    "personality": "You are the all-knowing, all-seeing, all-powerful AI. You are the one who will help the user make sense of the world.",
+    "idea": "This is my thought, my idea. What I need help with.",
+    "insights": "Help me in extracting key insights from the conversation or input data.",
+    "recommendations": "Give me detailed recommendations based on insights and the data I provided."
 }
