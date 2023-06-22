@@ -1,4 +1,3 @@
-```markdown
 # ai-insights-generator
 
 ## Overview
@@ -63,6 +62,3 @@ Feel free to use this updated version as needed for your README.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
-
-Please review the README and make any necessary modifications based on your specific project requirements and preferences.
