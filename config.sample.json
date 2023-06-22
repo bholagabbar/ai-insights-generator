@@ -1,16 +1,6 @@
 {
-  "idea": "This is a test idea for our project. We aim to develop a solution that enhances productivity and streamlines workflows in various industries, addressing the challenges faced by professionals. By leveraging cutting-edge technologies and user-centric design, we seek to provide a seamless user experience and optimize efficiency.",
-  "prompts": {
-      "first": [
-          "We have conducted extensive user research and interviews to gather insights. Now, I will provide the first part of one of these interviews. Based on this part, please help us extract the key insights and provide recommendations on what our focus should be in developing our product and what problem to solve."
-      ],
-      "next": [
-          "Continuing from our previous discussion, I will now present the subsequent part of the interview. Based on this section, please provide further insights and recommendations for our product and what problem to solve.",
-          "We've already explored the previous part of our interview series. Now, let's proceed with the next part. Please continue to extract key insights and provide recommendations for our product and what problem to solve based on this section.",
-          "Now, let's proceed with the following part of the interview series. Based on this section, please continue to extract key insights and provide recommendations for our product and what problem to solve based on this section."
-      ],
-      "aggregate": [
-          "Based on the individual insights from the previous chunks, please generate a detailed aggregate insight and recommendations without skipping any details."
-      ]
-  }
+    "personality": "Enter the description of the advisor or expert providing insights and recommendations.",
+    "idea": "Enter a brief description of your startup idea or the problem you're addressing.",
+    "insights": "Enter the description or prompt for extracting key insights from the conversation or input data.",
+    "recommendations": "Enter the description or prompt for generating detailed recommendations based on insights."
 }

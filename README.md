@@ -2,27 +2,22 @@
 
 ## Overview
 
-This script processes longer customer research calls, such as transcripts from [fireflies ai](https://fireflies.ai/), breaking them into manageable chunks and generating insights and recommendations for each chunk.
+This script accepts large input data, such as customer research calls or transcripts from various sources (eg from [fireflies ai](https://fireflies.ai/)), and generates insights and recommendations based on the provided data. It can handle input data from the following sources: HTTP(S) URLs, local files, or user input prompts. The script utilizes the OpenAI API to interact with the `gpt-3.5-turbo-16k` model and generate these insights and recommendations.
 
-It also provides an aggregated set of insights and recommendations for the entire research.
+## Use Cases
 
-The script utilizes the OpenAI API to interact with GPT and generate comprehensive summaries, recommendations, and analysis.
+- Customer Research Calls: Derive insights and focus areas from customer research calls or transcripts to drive startup success.
+- Market Research: Analyze surveys, reports, and competitor data to generate insights for informed business decisions.
+- User Feedback Analysis: Process support tickets, online reviews, and social media feedback to improve products/services.
+- Strategy Development: Utilize industry reports, trends, and expert opinions to inform strategic decision-making.
 
-## Features
-
-- Long Research Document Processing: The script efficiently handles long research documents, breaking them into smaller, manageable chunks.
-- Chunk-wise Insights and Recommendations: It applies extractive summarization techniques to derive insights and recommendations for each chunk of the research document.
-- Aggregated Insights and Recommendations: The script provides an aggregated set of insights and recommendations for the entire research.
-- ChatGPT Integration: It utilizes ChatGPT or similar models to generate comprehensive summaries and analysis for each chunk and the entire research document.
-
-Feel free to use this updated version as needed for your README.
 
 ## Usage
 
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/fireflies-transcript-splitter.git
+   git clone https://github.com/bholagabbar/ai-insights-generator.git
    ```
 
 2. Install the required dependencies:
@@ -31,12 +26,12 @@ Feel free to use this updated version as needed for your README.
    pip install -r requirements.txt
    ```
 
-3. Place your transcript document in the same directory as the script. Ensure you have a `.env` file derived from `.env.sample` and place your OpenAI key there.
+5. Run the script optionally research document file as an argument, or a link to a a transcript. If you don't have either, you can run it as is, and it will prompt you to paste the text:
 
-4. Customize the prompts and configurations in the `config.json` file according to your specific requirements. This file is ignored by Git to ensure privacy of business-sensitive information.
-
-5. Run the script optionally with the research document file as an argument. If you don't have the input file, you can run it as is, and it will prompt you to paste the text:
-
+   ```shell
+   python split_transcript.py https://jsonkeeper.com/b/WKIV
+   ```
+   or
    ```shell
    python split_transcript.py your_research_document.txt
    ```
@@ -45,11 +40,7 @@ Feel free to use this updated version as needed for your README.
    python split_transcript.py
    ```
 
-6. The script will split the research document into smaller parts, generate insights and recommendations for each part, and provide an aggregated set of insights and recommendations for the entire research.
-
-7. The output will be saved as separate text files for each part, and the insights and recommendations will be printed to the console.
-
-8. Use the generated insights, recommendations, and analysis to gain valuable insights, make informed decisions, and enhance your research.
+6. The insights and recommendations are printed on the screen, as well as saved to an output file
 
 ## Additional Usage Notes
 
